@@ -1,12 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Search</title>
-    </head>
-    <body>
-        <form action="https://google.com/search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
-        </form>
-    </body>
+<html lang="zh-CN">
+  <head>
+    <title>Search</title>
+    <style type="text/css">
+      @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        background-image: radial-gradient(
+            circle at var(--perE) 7%,
+            rgba(40, 40, 40, 0.04) 0%,
+            rgba(40, 40, 40, 0.04) 50%,
+            rgba(200, 200, 200, 0.04) 50%,
+            rgba(200, 200, 200, 0.04) 100%
+          ),
+          radial-gradient(
+            circle at var(--perC) var(--perD),
+            rgba(99, 99, 99, 0.04) 0%,
+            rgba(99, 99, 99, 0.04) 50%,
+            rgba(45, 45, 45, 0.04) 50%,
+            rgba(45, 45, 45, 0.04) 100%
+          ),
+          radial-gradient(
+            circle at var(--perA) var(--perB),
+            rgba(243, 243, 243, 0.04) 0%,
+            rgba(243, 243, 243, 0.04) 50%,
+            rgba(37, 37, 37, 0.04) 50%,
+            rgba(37, 37, 37, 0.04) 100%
+          ),
+          linear-gradient(var(--angle), rgb(34, 222, 237), rgb(135, 89, 215));
+        animation: move 30s infinite alternate linear;
+      }
+
+      @property --perA {
+        syntax: "<percentage>";
+        inherits: false;
+        initial-value: 75%;
+      }
+
+      @property --perB {
+        syntax: "<percentage>";
+        inherits: false;
+        initial-value: 99%;
+      }
+
+      @property --perC {
+        syntax: "<percentage>";
+        inherits: false;
+        initial-value: 15%;
+      }
+
+      @property --perD {
+        syntax: "<percentage>";
+        inherits: false;
+        initial-value: 16%;
+      }
+
+      @property --perE {
+        syntax: "<percentage>";
+        inherits: false;
+        initial-value: 86%;
+      }
+
+      @property --angle {
+        syntax: "<angle>";
+        inherits: false;
+        initial-value: 0deg;
+      }
+
+      @keyframes move {
+        100% {
+          --perA: 85%;
+          --perB: 49%;
+          --perC: 45%;
+          --perD: 39%;
+          --perE: 70%;
+          --angle: 360deg;
+        }
+      }
+
+      .searchForm {
+        position: relative;
+        width: 400px;
+        min-height: 400px;
+
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+      }
+
+      form {
+        position: relative;
+        width: 100%;
+        /* height: 100%; */
+        padding: 40px;
+      }
+      .inputBox {
+        width: 100%;
+        margin-left: 10px;
+      }
+      .searchContent {
+        width: 130%;
+        background: rgba(255, 255, 255, 0.5);
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        border-radius: 35px;
+        font-size: large;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+
+      .searchBtn {
+        margin-top: 20px;
+        margin-right: 10px;
+        background: #9ae945;
+        color: #666;
+        font-size: large;
+        max-width: 160px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 35px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      a {
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 600;
+        text-decoration: none;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="searchForm">
+      <img
+        src="https://www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png"
+        style="filter: opacity(75%); pointer-events: none"
+      />
+      <form action="https://baidu.com/s">
+        <div class="inputBox">
+          <input type="text" name="wd" class="searchContent" />
+          <input type="submit" value="Baidu Search" class="searchBtn" />
+          <input type="button" value="手气不错" class="searchBtn" onclick="alert('百度竞价推广表示，不给该功能捏🤗')"/>
+        </div>
+      </form>
+    </div>
+    <div class="link">
+      <a href="./imageSearch.html">图片搜索</a>
+      <a href="./gaojiSearch.html">高级搜索</a>
+    </div>
+  </body>
 </html>
