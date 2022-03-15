@@ -125,9 +125,8 @@
         margin: 5px;
         /* padding: 10px 20px;
         border-radius: 35px; */
-        /* font-size: medium; */
-        /* border: 1px solid rgba(255, 255, 255, 0.5); */
-      
+      /* font-size: medium; */
+      /* border: 1px solid rgba(255, 255, 255, 0.5); */
 
       option {
         background: rgba(255, 255, 255, 0.6);
@@ -138,7 +137,7 @@
         border-radius: 35px; */
         font-size: medium;
         /* border: 1px solid rgba(255, 255, 255, 0.5); */
-      } 
+      }
       td {
         margin: 5px;
       }
@@ -152,7 +151,7 @@
   </head>
   <body>
     <div class="searchForm">
-        <img
+      <img
         src="https://www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png"
         style="filter: opacity(75%); pointer-events: none"
       />
@@ -171,11 +170,18 @@
               <td width="300">包含以下<b>全部</b>的关键词</td>
               <td>
                 <input id="keyword" size="35" name="q1" maxlength="100" />
-                <input value="百度一下" type="submit" class="Btn" style="background: #9ae945;
-        color: #666;
-        padding: 3px 6px;
-        border-radius: 10px;
-        font-weight: 600;"/>
+                <input
+                  value="百度一下"
+                  type="submit"
+                  class="Btn"
+                  style="
+                    background: #9ae945;
+                    color: #666;
+                    padding: 3px 6px;
+                    border-radius: 10px;
+                    font-weight: 600;
+                  "
+                />
               </td>
             </tr>
             <tr>
@@ -247,12 +253,12 @@
                 />
                 <label for="ct_0">全部语言</label>
                 <div>
-                <input name="ct" id="ct_1" value="1" type="radio" />
-                <label for="ct_1">仅在简体中文中</label>
+                  <input name="ct" id="ct_1" value="1" type="radio" />
+                  <label for="ct_1">仅在简体中文中</label>
                 </div>
                 <div>
-                <input name="ct" id="ct_2" value="2" type="radio" />
-                <label for="ct_2">仅在繁体中文中</label>
+                  <input name="ct" id="ct_2" value="2" type="radio" />
+                  <label for="ct_2">仅在繁体中文中</label>
                 </div>
               </td>
             </tr>
@@ -260,7 +266,11 @@
               <td><b>文档格式</b></td>
               <td>搜索网页格式是</td>
               <td>
-                <select name="ft" size="1" class="custom-select custom-select-sm mb-3">
+                <select
+                  name="ft"
+                  size="1"
+                  class="custom-select custom-select-sm mb-3"
+                >
                   <option value="">所有网页和文件</option>
                   <option value="pdf">Adobe Acrobat PDF (.pdf)</option>
                   <option value="doc">微软 Word (.doc)</option>
@@ -283,13 +293,13 @@
                   type="radio"
                 />
                 <label for="q5_0">网页的任何地方</label>
-                <div>    
-                <input name="q5" id="q5_1" value="1" type="radio" />
-                <label for="q5_1">仅网页的标题中</label>
+                <div>
+                  <input name="q5" id="q5_1" value="1" type="radio" />
+                  <label for="q5_1">仅网页的标题中</label>
                 </div>
                 <div>
-                <input name="q5" id="q5_2" value="2" type="radio" />
-                <label for="q5_2">仅在网页的URL中</label>
+                  <input name="q5" id="q5_2" value="2" type="radio" />
+                  <label for="q5_2">仅在网页的URL中</label>
                 </div>
               </td>
             </tr>
@@ -311,5 +321,8 @@
       </form>
     </div>
     <a href="./index.html">搜索</a>
+    <div style="position: absolute; right: 0%; bottom: 0%; font-size: small;">
+      该css背景样式仅支持 chrome, edge, opera 浏览器,建议自行更换合适的浏览器,不会适配的🤔🤔🤔
+    </div>
   </body>
 </html>
